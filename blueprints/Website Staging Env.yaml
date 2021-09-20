@@ -18,7 +18,7 @@ metadata:
     server and MySQL Aurora serverless cluster
 
 clouds:
-  - AWS: eu-west-1
+  - AWS 2: eu-west-1
 
 artifacts:
   - java-spring-website: latest/colony-java-spring-sample-1.0.0-BUILD-SNAPSHOT.war
@@ -57,7 +57,7 @@ services:
         - DB_PASS: $DB_PASS
         - CLUSTER_MIN_CAPACITY: 2
         - CLUSTER_MAX_CAPACITY: 4
-        - SANDBOX_ID: $COLONY.SandboxId
-        - VPC_ID: $COLONY.VirtualNetworkId #Sandbox VPC Id
+        - SANDBOX_ID: $TORQUE.SandboxId
+        - VPC_ID: $TORQUE.VirtualNetworkId #Sandbox VPC Id
 debugging:
   availability: on
