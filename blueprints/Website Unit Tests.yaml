@@ -55,7 +55,7 @@ services:
         - DB_NAME: $DB_NAME
         - DB_USER: $DB_USER
         - DB_PASS: $DB_PASS
-        - SANDBOX_ID: $COLONY.SandboxId
-        - VPC_ID: $COLONY.VirtualNetworkId #Sandbox VPC Id
+        - SANDBOX_ID: $TORQUE.SandboxId
+        - VPC_ID: $TORQUE.VirtualNetworkId #Sandbox VPC Id
 debugging:
   availability: on
