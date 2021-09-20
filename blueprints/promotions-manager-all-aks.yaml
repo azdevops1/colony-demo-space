@@ -5,7 +5,7 @@ metadata:
     Deployment of our promotions manager app in Kuberentes
     
 clouds: 
-  - azure 4/aks-cluster
+  - azure/torque-cs
   
 artifacts:
   - promotions-manager-ui: artifacts/latest/promotions-manager-ui.master.tar.gz
@@ -24,12 +24,12 @@ applications:
       input_values:
         - PORT: $PORT
         - API_PORT: $API_PORT
-        - API_DNS: $colony.applications.promotions-manager-api.dns
+        - API_DNS: $torque.applications.promotions-manager-api.dns
 
   - promotions-manager-api:
       input_values:        
         - API_PORT: $API_PORT
-        - DATABASE_HOST: $colony.applications.mongodb.dns
+        - DATABASE_HOST: $torque.applications.mongodb.dns
         - RELEASE_NUMBER: $RELEASE_NUMBER
         - API_BUILD_NUMBER: $API_BUILD_NUMBER
         
