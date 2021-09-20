@@ -5,7 +5,7 @@ metadata:
     Deployment of our promotions manager app without UI. Only API and DB on the node.
     
 clouds: 
-  - azure 4/aks-cluster
+  - azure/torque-cs
   
 artifacts:
   - promotions-manager-api-external: artifacts/latest/promotions-manager-api.master.tar.gz
@@ -20,7 +20,7 @@ applications:
   - promotions-manager-api-external:
       input_values:        
         - API_PORT: $API_PORT
-        - DATABASE_HOST: $colony.applications.mongodb.dns
+        - DATABASE_HOST: $torque.applications.mongodb.dns
         - RELEASE_NUMBER: $RELEASE_NUMBER
         - API_BUILD_NUMBER: $API_BUILD_NUMBER
 
