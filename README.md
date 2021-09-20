@@ -1,1 +1,1 @@
-# colony-demo-space
+# torque-demo-space
